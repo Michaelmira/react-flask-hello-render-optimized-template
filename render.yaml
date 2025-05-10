@@ -1,23 +1,12 @@
 services:
   - type: web
-    name: devmentor-frontend
-    env: static
+    name: react-flask-app
+    env: python
     buildCommand: |
-      npm install -g pnpm
-      pnpm install --no-frozen-lockfile
-      pnpm run build
-    staticPublishPath: ./dist
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
-    headers:
-      - source: /*
-        headers:
-          - key: Cache-Control
-            value: no-store
-          - key: Access-Control-Allow-Origin
-            value: "*"
+      npm install
+      npm run build
+      pip install -r requirements.txt
+    startCommand: gunicorn src.app:app
     envVars:
       - key: NODE_VERSION
         value: 18.x
@@ -25,3 +14,8 @@ services:
         value: production
       - key: PYTHON_VERSION
         value: 3.9.9
+      - key: FLASK_APP
+        value: src/app.py
+      - key: FLASK_ENV
+        value: production
+    staticPublishPath: ./dist
