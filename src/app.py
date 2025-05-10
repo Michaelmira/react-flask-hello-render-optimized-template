@@ -17,7 +17,7 @@ import cloudinary
 import cloudinary.uploader as uploader
 
 ENV = os.getenv("FLASK_ENV", "development")
-static_file_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../public/')
+static_file_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../dist/')
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
