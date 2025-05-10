@@ -1,7 +1,7 @@
 {
 	"name": "react-hello-webapp",
-	"version": "1.0.2",
-	"description": "Improved version with better dependency management",
+	"version": "2.0",
+	"description": "Improved version with better dependency management Optimized for instant render deployments",
 	"main": "index.js",
 	"engines": {
 		"node": ">=18.x"
@@ -22,6 +22,10 @@
 		{
 			"name": "Ignacio Cordoba",
 			"url": "http://github.com/nachovz"
+		},
+		{
+			"name": "Michael Mirisciotta",
+			"url": "https://github.com/Michaelmira"
 		}
 	],
 	"license": "ISC",
