@@ -1,11 +1,11 @@
 {
 	"name": "react-hello-webapp",
-	"engines": {
-		"node": "16.x"
-	},
-	"version": "1.0.1",
-	"description": "",
+	"version": "1.0.2",
+	"description": "Improved version with better dependency management",
 	"main": "index.js",
+	"engines": {
+		"node": ">=18.x"
+	},
 	"scripts": {
 		"start": "webpack-dev-server --config webpack.dev.js --port 3000",
 		"build": "webpack --config webpack.prod.js"
@@ -36,19 +36,16 @@
 		"babel-eslint": "^10.1.0",
 		"babel-loader": "^8.2.3",
 		"babel-plugin-transform-class-properties": "^6.24.1",
-		"bc-console": "0.0.2",
 		"css-loader": "^6.5.1",
 		"dotenv-webpack": "^7.0.3",
-		"envfile": "^6.17.0",
-		"error-overlay-webpack-plugin": "^1.0.0",
 		"eslint": "^8.4.0",
 		"eslint-plugin-react": "^7.27.1",
 		"eslint-webpack-plugin": "^3.1.1",
+		"error-overlay-webpack-plugin": "^1.0.0",
 		"file-loader": "^6.2.0",
 		"gh-pages": "^3.2.3",
 		"html-loader": "^3.0.1",
-		"html-webpack-plugin": "^5.5.0",
-		"parse-github-url": "^1.0.2",
+		"html-webpack-plugin": "^5.6.3",
 		"prettier": "^2.5.1",
 		"remote-origin-url": "^2.0.0",
 		"style-loader": "^3.3.1",
@@ -58,10 +55,7 @@
 		"webpack-merge": "^5.8.0"
 	},
 	"babel": {
-		"presets": [
-			"@babel/preset-env",
-			"@babel/preset-react"
-		],
+		"presets": ["@babel/preset-env", "@babel/preset-react"],
 		"plugins": [
 			"@babel/plugin-proposal-class-properties",
 			[
@@ -73,10 +67,21 @@
 		]
 	},
 	"dependencies": {
+		"@stripe/react-stripe-js": "^2.9.0",
+		"@stripe/stripe-js": "^4.10.0",
+		"cors": "^2.8.5",
+		"express": "^4.21.1",
+		"googleapis": "^144.0.0",
+		"libphonenumber-js": "^1.11.4",
+		"lucide-react": "^0.453.0",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
 		"react-dom": "^16.8.4",
-		"react-polyfills": "0.0.1",
-		"react-router-dom": "^6.3.0"
+		"react-input-mask": "^2.0.4",
+		"react-phone-input-2": "^2.15.1",
+		"react-router-dom": "^6.3.0",
+		"react-select": "^5.8.0",
+		"react-slider": "^2.0.6",
+		"stripe": "^17.4.0"
 	}
 }
